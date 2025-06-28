@@ -1,5 +1,5 @@
 import { ServiceItem } from "@/types/services";
-import { Droplets, HeartHandshake, Sparkle } from "lucide-react";
+import { Droplets, HeartHandshake, Leaf, Smile, Sparkle } from "lucide-react";
 
 export const testimonials = [
   {
@@ -79,15 +79,15 @@ export const services: ServiceItem[] = [
     title: "Triệt lông bằng ánh sáng IPL",
     desc: "Loại bỏ lông hiệu quả, an toàn, giúp da mịn màng lâu dài, không đau rát.",
     img: "/images/service-5.png",
-    Icon: Sparkle,
-    price: 109990,
+    Icon: Smile,
+    price: 499999,
   },
   {
-    title: "Triệt lông bằng ánh sáng IPL",
-    desc: "Loại bỏ lông hiệu quả, an toàn, giúp da mịn màng lâu dài, không đau rát.",
-    img: "/images/service-5.png",
-    Icon: Sparkle,
-    price: 109990,
+    title: "Liệu trình thải độc",
+    desc: "Liệu trình thải độc giúp thanh lọc làn da và cơ thể bằng các bước chăm sóc chuyên sâu kết hợp công nghệ hiện đại.",
+    img: "/images/service-6.webp",
+    Icon: Leaf,
+    price: 499999,
   },
 ];
 
