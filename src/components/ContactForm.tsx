@@ -51,6 +51,22 @@ export default function ContactForm() {
             <div>
               <label
                 className="mb-2 block text-sm font-medium text-gray-700"
+                htmlFor="email"
+              >
+                Số điện thoại
+              </label>
+              <input
+                id="phone"
+                type="text"
+                name="phone"
+                required
+                className="w-full rounded-lg border border-gray-300 p-3"
+                placeholder="+ 090 909 090"
+              />
+            </div>
+            <div>
+              <label
+                className="mb-2 block text-sm font-medium text-gray-700"
                 htmlFor="message"
               >
                 Nội dung
