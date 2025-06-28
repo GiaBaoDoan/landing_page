@@ -1,7 +1,7 @@
 export default function Video(): React.ReactNode {
   return (
     <video
-      className="absolute inset-0 w-full object-cover"
+      className="absolute h-screen inset-0 w-full object-cover"
       autoPlay
       muted
       loop

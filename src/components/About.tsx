@@ -6,17 +6,17 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="py-24 relative" id="about">
-      <Container className="justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
+    <section className="py-20 relative" id="about">
+      <Container className="grid gap-12 lg:grid-cols-2 grid-cols-1 items-center">
         {/* Ảnh bên trái */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
+          className="w-full grid sm:grid-cols-2 grid-cols-1 gap-4 order-last lg:order-first"
         >
-          <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+          <div className="flex justify-center sm:justify-end pt-10 sm:pt-20">
             <Image
               width={200}
               height={200}
@@ -25,13 +25,15 @@ export default function AboutSection() {
               alt="about us"
             />
           </div>
-          <Image
-            width={200}
-            height={200}
-            className="rounded-xl object-cover"
-            src="/images/about-2.webp"
-            alt="about us"
-          />
+          <div className="flex justify-center sm:justify-start">
+            <Image
+              width={200}
+              height={200}
+              className="rounded-xl object-cover"
+              src="/images/about-2.webp"
+              alt="about us"
+            />
+          </div>
         </motion.div>
 
         {/* Nội dung bên phải */}
@@ -40,52 +42,44 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex"
+          className="w-full flex flex-col items-center lg:items-start text-center lg:text-left gap-8"
         >
-          <div className="w-full flex-col justify-center items-start gap-8 flex">
-            <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-              <h2 className="text-gray-900 text-4xl font-bold leading-normal lg:text-start text-center">
-                La Sol Spa – Chăm sóc từ tâm, đẹp từ da
-              </h2>
-              <p className="text-gray-500 text-base leading-relaxed lg:text-start text-center">
-                Tại La Sol Spa, chúng tôi tin rằng làn da khỏe mạnh là nền tảng
-                của vẻ đẹp tự nhiên. Với không gian thư giãn đẳng cấp và đội ngũ
-                kỹ thuật viên giàu kinh nghiệm, bạn sẽ được tận hưởng liệu trình
-                chăm sóc da chuyên sâu, an toàn và hiệu quả.
-              </p>
-            </div>
+          <h2 className="text-gray-900 text-3xl sm:text-4xl font-bold leading-normal">
+            La Sol Spa – Chăm sóc từ tâm, đẹp từ da
+          </h2>
+          <p className="text-gray-600 text-base leading-relaxed">
+            Tại La Sol Spa, chúng tôi tin rằng làn da khỏe mạnh là nền tảng của
+            vẻ đẹp tự nhiên. Với không gian thư giãn đẳng cấp và đội ngũ kỹ
+            thuật viên giàu kinh nghiệm, bạn sẽ được tận hưởng liệu trình chăm
+            sóc da chuyên sâu, an toàn và hiệu quả.
+          </p>
 
-            <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
-              <div className="flex-col justify-start items-start inline-flex">
-                <h3 className="text-gray-900 text-4xl font-bold leading-normal">
-                  5+
-                </h3>
-                <h6 className="text-gray-500 text-base leading-relaxed">
-                  Năm kinh nghiệm
-                </h6>
-              </div>
-              <div className="flex-col justify-start items-start inline-flex">
-                <h4 className="text-gray-900 text-4xl font-bold leading-normal">
-                  300+
-                </h4>
-                <h6 className="text-gray-500 text-base leading-relaxed">
-                  Khách hàng hài lòng
-                </h6>
-              </div>
-              <div className="flex-col justify-start items-start inline-flex">
-                <h4 className="text-gray-900 text-4xl font-bold leading-normal">
-                  50+
-                </h4>
-                <h6 className="text-gray-500 text-base leading-relaxed">
-                  Liệu trình chuyên sâu
-                </h6>
-              </div>
+          {/* Thống kê */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-8">
+            <div className="flex flex-col items-center lg:items-start">
+              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                5+
+              </h3>
+              <p className="text-sm text-gray-500">Năm kinh nghiệm</p>
+            </div>
+            <div className="flex flex-col items-center lg:items-start">
+              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                300+
+              </h3>
+              <p className="text-sm text-gray-500">Khách hàng hài lòng</p>
+            </div>
+            <div className="flex flex-col items-center lg:items-start">
+              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                50+
+              </h3>
+              <p className="text-sm text-gray-500">Liệu trình chuyên sâu</p>
             </div>
           </div>
 
+          {/* Nút xem thêm */}
           <a
             href="#"
-            className="sm:w-fit font-bold w-full px-3.5 py-2 bg-teal-500 hover:bg-teal-800 transition-all duration-700 ease-in-out rounded-lg text-white shadow justify-center items-center flex"
+            className="mt-4 sm:w-fit w-full px-6 py-3 rounded-lg bg-teal-500 text-white font-semibold shadow hover:bg-teal-600 transition-all text-center"
           >
             Xem thêm
           </a>
