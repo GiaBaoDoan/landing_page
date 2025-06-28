@@ -1,13 +1,13 @@
 "use client";
 
+import Container from "@/components/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function AboutSection() {
   return (
     <section className="py-24 relative" id="about">
-      {/* <div className="absolute inset-0 -z-10 bg-[url('/images/bg-about.webp')] bg-cover bg-center rounded-xl"></div> */}
-      <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+      <Container>
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
           {/* Ảnh bên trái */}
           <motion.div
@@ -17,7 +17,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
           >
-            <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+            <div className="pt-24 lg:justify-center sm:justify-start justify-start items-start gap-2.5 flex">
               <Image
                 width={200}
                 height={200}
@@ -30,7 +30,7 @@ export default function AboutSection() {
               width={200}
               height={200}
               className="rounded-xl object-cover"
-              src="/images/about-1.webp"
+              src="/images/about-2.webp"
               alt="about us"
             />
           </motion.div>
@@ -92,7 +92,7 @@ export default function AboutSection() {
             </a>
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
