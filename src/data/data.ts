@@ -91,6 +91,30 @@ export const services: ServiceItem[] = [
   },
 ];
 
+export const prices = [
+  {
+    plan: "Cơ bản",
+    price: "499K",
+    desc: "Gói phù hợp cho cá nhân",
+    features: ["1 buổi tư vấn", "Lịch linh hoạt", "Hỗ trợ email"],
+    isPopular: false,
+  },
+  {
+    plan: "Chuyên nghiệp",
+    price: "899K",
+    desc: "Gói tốt nhất cho người dùng thường xuyên",
+    features: ["3 buổi tư vấn", "Lịch ưu tiên", "Hỗ trợ Zalo, email"],
+    isPopular: true,
+  },
+  {
+    plan: "Doanh nghiệp",
+    price: "1.499K",
+    desc: "Giải pháp cho nhóm & công ty",
+    features: ["5 buổi tư vấn", "Hỗ trợ theo nhóm", "Báo cáo cá nhân hóa"],
+    isPopular: false,
+  },
+];
+
 export const plans = [
   { plan: "Basic", price: "499k", desc: "Làm sạch & dưỡng ẩm" },
   { plan: "Pro", price: "799k", desc: "Trị liệu mụn chuyên sâu" },
