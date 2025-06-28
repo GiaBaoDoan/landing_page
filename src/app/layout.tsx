@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // tuỳ bạn chọn weight cần dùng
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable}`}>{children}</body>
+    <html lang="vi">
+      <body className={`${outfit.variable} font-sans`}>{children}</body>
     </html>
   );
 }
